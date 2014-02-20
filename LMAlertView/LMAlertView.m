@@ -451,13 +451,15 @@
 		viewController.view = self.alertContainerView;
 	}
 	else {
-		UIViewController *viewController2 = [[UIViewController alloc] init];
-		viewController2.view = self.alertContainerView;
-		
-		// We fake "present" this view controller so it can be dismissed elswhere
-		[viewController presentViewController:viewController2 animated:NO completion:nil];
-		
-		[viewController2 addChildViewController:self.controller];
+        //		UIViewController *viewController2 = [[UIViewController alloc] init];
+        //		viewController2.view = self.alertContainerView;
+        //
+        //		// We fake "present" this view controller so it can be dismissed elswhere
+        //		[viewController presentViewController:viewController2 animated:NO completion:nil];
+        //
+        //		[viewController2 addChildViewController:self.controller];
+        viewController.view = self.alertContainerView;
+		[viewController addChildViewController:self.controller];
 	}
 	
 	_visible = YES;

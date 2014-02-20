@@ -24,4 +24,8 @@
     return self.alertView.autoRotate;
 }
 
+-(UIViewController *)presentingViewController {
+    return self;
+}
+
 @end
